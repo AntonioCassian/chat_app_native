@@ -12,11 +12,11 @@ const Stack = createStackNavigator();
 
 export default function StaRoutes() {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="Login" component={Login} screenOptions={{}}/>
+    <Stack.Navigator screenOptions={{ headerShown: false}} initialRouteName='Login'>
+      <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Register" component={Register} />
       <Stack.Screen name="Principal" component={Tabs} />
-      <Stack.Screen options={(route) => ({
+      <Stack.Screen options={() => ({
         headerShown: true,
         headerStyle:{
           backgroundColor: '#e5e5e5'
